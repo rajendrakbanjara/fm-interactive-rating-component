@@ -7,36 +7,65 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive rating component</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Overpass:wght@400;700&display=swap');
+  </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Overpass:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./output.css">
+
 </head>
-<body class="bg-lightGrey font-overpass">
+<body class="bg-VeryDarkBlue">
 
-  <!-- Rating state start -->
+  <div class="main-container flex items-center justify-center h-screen font-Overpass">
+    <!-- Card div -->
+    <div class="card-container p-8 bg-DarkBlue w-[350px] rounded-3xl">
+      <div class="content">
+        <img src="images/icon-star.svg" class="p-3 h-[35px] bg-gray-700 rounded-full" alt="star-icon-image">
+          <h1 class="text-white text-[20px] pt-4 pb-3 font-Overpass">How did we do?</h1>
+          <p class="btn text-gray-400 mb-2 text-xs leading-5">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+        <!--Star rating div -->
+          <div class="py-4 rating flex justify-between">
+            <div class="star bg-gray-700 h-11 w-11 flex justify-center items-center p-3 rounded-full hover:bg-gray-500  hover:text-white">
+              <p  class="text-gray-400 ">1</p>
+            </div>
+            <div class="star bg-gray-700 h-11 w-11 flex justify-center items-center p-3 rounded-full  hover:bg-gray-500 hover:text-white">
+              <p class="text-gray-400">2</p>
+            </div>
+            <div class="star bg-gray-700 h-11 w-11 flex justify-center items-center p-3 rounded-full  hover:bg-gray-500 hover:text-white">
+              <p class="text-gray-400">3</p>
+            </div>
+            <div class="star bg-gray-700 h-11 w-11 flex justify-center items-center p-3 rounded-full  hover:bg-gray-500 hover:text-white">
+              <p class="text-gray-400">4</p>
+            </div>
+            <div class="star bg-gray-700 h-11 w-11 flex justify-center items-center p-3 rounded-full  hover:bg-gray-500 hover:text-white">
+              <p class="text-gray-400">5</p>
+            </div>
+          </div>
+          <!-- Submit Rating button -->
+        <button id="submit" class="mt-2 py-[10px] rounded-3xl bg-orangeCustom w-full text-white text-[8px] hover:bg-white hover:text-orangeCustom"><p class="text-[15px]">SUBMIT</p></button>
+      </div>
+    </div>
 
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
+      <!-- Rating Card -->
+      <div class="thank-you px-7 py-9 bg-DarkBlue w-[350px] rounded-3xl hidden">
+         <div class="">
+           <div class="flex justify-center">
+            <img src="./images/illustration-thank-you.svg">
+           </div>
+          <div class="flex justify-center my-5">
+            <p class="bg-gray-800 rounded-3xl w-auto py-1 px-3 text-orangeCustom">You selected <span id="rating"></span> out of 5</p>
+          </div>
+          <div class="flex justify-center">
+            <h1 class="text-white text-[25px] font-Overpass">Thank You!</h1>
+          <!-- Rating display div -->
+          </div>
+            <p class="text-gray-400 text-center text-[13px] font-Overpass">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to <br> get in touch!</p>
+        </div>
+      </div>
   </div>
+  <!-- Javascript -->
+  <script src="index.js"></script>
 </body>
 </html>
